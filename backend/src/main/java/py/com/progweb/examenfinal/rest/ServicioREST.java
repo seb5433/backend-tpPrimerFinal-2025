@@ -63,7 +63,7 @@ public class ServicioREST {
             List<Servicio> servicios = servicioDAO.listarPorClienteYFecha(clienteId, fecha);
             List<ServicioDTO> result = new ArrayList<>();
             for (Servicio servicio : servicios) {
-                result.add(toDTO(servicio, false));
+                result.add(toDTO(servicio, true));
             }
             return Response.ok(result).build();
         } catch (Exception e) {
