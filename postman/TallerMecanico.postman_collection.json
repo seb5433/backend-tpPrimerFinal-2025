@@ -423,7 +423,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{backend-host}}/{{nombre-war}}/servicios?clienteId=1&fecha=2025-05-09",
+							"raw": "{{backend-host}}/{{nombre-war}}/servicios?clienteId=1&includeDetalles=true",
 							"host": [
 								"{{backend-host}}"
 							],
@@ -438,7 +438,12 @@
 								},
 								{
 									"key": "fecha",
-									"value": "2025-05-09"
+									"value": "2025-05-09",
+									"disabled": true
+								},
+								{
+									"key": "includeDetalles",
+									"value": "true"
 								}
 							]
 						}
@@ -477,7 +482,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n  \"fecha\": \"2025-04-15\",\n  \"descripcionGeneral\": \"Mantenimiento general\",\n  \"kilometrajeActual\": 15000,\n  \"costoTotal\": 300000,\n  \"idVehiculo\": 1,\n  \"detalles\": [\n    {\n      \"descripcion\": \"Cambio de aceite\",\n      \"costo\": 50000,\n      \"idRepuestos\": [{{repuestoId}}],\n      \"idMecanicos\": [{{mecanicoId}}]\n    }\n  ]\n}",
+							"raw": "{\n  \"fecha\": \"2025-04-15\",\n  \"descripcionGeneral\": \"Mantenimiento general\",\n  \"kilometrajeActual\": 15000,\n  \"costoTotal\": 300000,\n  \"idVehiculo\": 1,\n  \"detalles\": [\n    {\n      \"descripcion\": \"Cambio de aceite\",\n      \"costo\": 50000,\n      \"idRepuestos\": [1],\n      \"idMecanicos\": [1]\n    }\n  ]\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -527,7 +532,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"nombre\": \"Cachito\",\n    \"apellido\": \"Mendez\",\n    \"cedula\": 5888887,\n    \"email\": \"cachitomendez@gmail.com\",\n    \"direccion\": \"FDO\",\n    \"tipoCliente\": \"VIP\"\n}",
+							"raw": "{\n    \"nombre\": \"Gustavo\",\n    \"apellido\": \"Mendez\",\n    \"cedula\": 55555555,\n    \"email\": \"cachitomendez@gmail.com\",\n    \"telefono\": \"0983819470\",\n    \"direccion\": \"FDO\",\n    \"tipoCliente\": \"VIP\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
