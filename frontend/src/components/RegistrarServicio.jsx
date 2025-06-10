@@ -48,6 +48,10 @@ export default function RegistrarServicio() {
 
   const agregarDetalle = (e) => {
     e.preventDefault();
+    if (!detalle.descripcion || !detalle.costo) {
+      alert("Completa la descripción y el costo del detalle.");
+      return;
+    }
     setForm({ ...form, detalles: [...form.detalles, detalle] });
     setDetalle({ descripcion: "", costo: "", idRepuestos: [], idMecanicos: [] });
   };
@@ -144,7 +148,6 @@ export default function RegistrarServicio() {
             placeholder="Descripción del trabajo"
             value={detalle.descripcion}
             onChange={handleDetalleChange}
-            required
           />
         </div>
         <div className="mb-3">
@@ -155,7 +158,6 @@ export default function RegistrarServicio() {
             placeholder="Costo del detalle"
             value={detalle.costo}
             onChange={handleDetalleChange}
-            required
           />
         </div>
         <div className="mb-3">

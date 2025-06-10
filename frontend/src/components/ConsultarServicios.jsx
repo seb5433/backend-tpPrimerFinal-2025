@@ -84,13 +84,19 @@ export default function ConsultarServicios() {
           <div className="card-body">
             <h3 className="card-title">Detalles del Servicio</h3>
             <ul className="list-group">
-              {selectedServicio.detalles &&
-              selectedServicio.detalles.length > 0 ? (
+              {selectedServicio.detalles && selectedServicio.detalles.length > 0 ? (
                 selectedServicio.detalles.map((d, i) => (
                   <li key={i} className="list-group-item bg-dark text-light border-0">
                     <strong>{d.descripcion}</strong> - Costo: {d.costo} <br />
-                    Repuestos: {d.idRepuestos?.join(", ") || "Ninguno"} <br />
-                    Mecánicos: {d.idMecanicos?.join(", ") || "Ninguno"}
+                    Repuestos:{" "}
+                    {d.repuestos && d.repuestos.length > 0
+                      ? d.repuestos.map((r, idx) => r.nombre || r.descripcion || `Repuesto #${r.id}`).join(", ")
+                      : "Ninguno"}
+                    <br />
+                    Mecánicos:{" "}
+                    {d.mecanicos && d.mecanicos.length > 0
+                      ? d.mecanicos.map((m, idx) => m.nombre).join(", ")
+                      : "Ninguno"}
                   </li>
                 ))
               ) : (

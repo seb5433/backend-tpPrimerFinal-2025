@@ -7,6 +7,7 @@ export default function RegistrarCliente() {
     cedula: "",
     email: "",
     direccion: "",
+    telefono: "", 
     tipoCliente: "",
   });
 
@@ -28,6 +29,7 @@ export default function RegistrarCliente() {
           cedula: "",
           email: "",
           direccion: "",
+          telefono: "", 
           tipoCliente: "",
         });
       } else {
@@ -89,6 +91,16 @@ export default function RegistrarCliente() {
             name="direccion"
             placeholder="Dirección"
             value={form.direccion}
+            onChange={handleChange}
+            required
+          />
+        </div>
+        <div className="mb-3">
+          <input
+            className="form-control bg-secondary text-light border-0"
+            name="telefono"
+            placeholder="Teléfono"
+            value={form.telefono}
             onChange={handleChange}
             required
           />
