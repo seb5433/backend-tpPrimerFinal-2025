@@ -1,5 +1,5 @@
-# backend-tpPrimerParcial-2025
-Primer parcial de backend 2025 fpuna
+# backend-tpPrimerFinal-2025
+Primer final de backend 2025 fpuna
 
 
 ## Pre-requisitos
