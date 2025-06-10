@@ -23,7 +23,7 @@ if errorlevel 1 (
 echo Construcción exitosa!
 
 :: Path al archivo WAR
-set WAR_FILE=target\parcial.war
+set WAR_FILE=target\examenfinal.war
 
 :: Verificar que el archivo WAR exista
 if not exist "%WAR_FILE%" (

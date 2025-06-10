@@ -21,7 +21,7 @@ fi
 echo "Construcción exitosa!"
 
 # Path al archivo WAR
-WAR_FILE="target/parcial.war"
+WAR_FILE="target/examenfinal.war"
 
 # Verificar que el archivo WAR exista
 if [ ! -f "$WAR_FILE" ]; then
