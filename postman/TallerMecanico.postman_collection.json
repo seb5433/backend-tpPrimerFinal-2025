@@ -1,0 +1,612 @@
+{
+	"info": {
+		"_postman_id": "6cdd9fa1-4093-4778-9613-b81e19a26acd",
+		"name": "Taller Mecanico API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "18772198"
+	},
+	"item": [
+		{
+			"name": "CRUD Vehiculos",
+			"item": [
+				{
+					"name": "Listar vehiculos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{backend-host}}/{{nombre-war}}/vehiculos?clienteId=1",
+							"host": [
+								"{{backend-host}}"
+							],
+							"path": [
+								"{{nombre-war}}",
+								"vehiculos"
+							],
+							"query": [
+								{
+									"key": "clienteId",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obtener vehiculo por ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{backend-host}}/{{nombre-war}}/vehiculos/:idVehiculo",
+							"host": [
+								"{{backend-host}}"
+							],
+							"path": [
+								"{{nombre-war}}",
+								"vehiculos",
+								":idVehiculo"
+							],
+							"variable": [
+								{
+									"key": "idVehiculo",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Crear vehiculo",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"marca\": \"Toyota\",\n  \"numeroChapa\": \"ABC123\",\n  \"modelo\": \"Corolla\",\n  \"anio\": 2020,\n  \"tipo\": \"COCHE\",\n  \"idCliente\": 1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{backend-host}}/{{nombre-war}}/vehiculos",
+							"host": [
+								"{{backend-host}}"
+							],
+							"path": [
+								"{{nombre-war}}",
+								"vehiculos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Editar vehiculo",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"marca\": \"Toyota\",\n  \"numeroChapa\": \"ABC123\",\n  \"modelo\": \"Corolla\",\n  \"anio\": 2020,\n  \"tipo\": \"COCHE\",\n  \"idCliente\": 1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{backend-host}}/{{nombre-war}}/vehiculos/:idVehiculo",
+							"host": [
+								"{{backend-host}}"
+							],
+							"path": [
+								"{{nombre-war}}",
+								"vehiculos",
+								":idVehiculo"
+							],
+							"variable": [
+								{
+									"key": "idVehiculo",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar vehiculo",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{backend-host}}/{{nombre-war}}/vehiculos/:idVehiculo",
+							"host": [
+								"{{backend-host}}"
+							],
+							"path": [
+								"{{nombre-war}}",
+								"vehiculos",
+								":idVehiculo"
+							],
+							"variable": [
+								{
+									"key": "idVehiculo",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "CRUD Repuestos",
+			"item": [
+				{
+					"name": "Listar repuestos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{backend-host}}/{{nombre-war}}/repuestos",
+							"host": [
+								"{{backend-host}}"
+							],
+							"path": [
+								"{{nombre-war}}",
+								"repuestos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obtener repuesto por ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{backend-host}}/{{nombre-war}}/repuestos/:idRepuesto",
+							"host": [
+								"{{backend-host}}"
+							],
+							"path": [
+								"{{nombre-war}}",
+								"repuestos",
+								":idRepuesto"
+							],
+							"variable": [
+								{
+									"key": "idRepuesto",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Crear repuesto",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"nombre\": \"Filtro aceite\",\n  \"codigo\": \"FA-001\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{backend-host}}/{{nombre-war}}/repuestos",
+							"host": [
+								"{{backend-host}}"
+							],
+							"path": [
+								"{{nombre-war}}",
+								"repuestos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Editar repuesto",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"nombre\": \"Filtro aceite\",\n  \"codigo\": \"FA-001\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{backend-host}}/{{nombre-war}}/repuestos/:idRepuesto",
+							"host": [
+								"{{backend-host}}"
+							],
+							"path": [
+								"{{nombre-war}}",
+								"repuestos",
+								":idRepuesto"
+							],
+							"variable": [
+								{
+									"key": "idRepuesto",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar repuesto",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{backend-host}}/{{nombre-war}}/repuestos/:idRepuesto",
+							"host": [
+								"{{backend-host}}"
+							],
+							"path": [
+								"{{nombre-war}}",
+								"repuestos",
+								":idRepuesto"
+							],
+							"variable": [
+								{
+									"key": "idRepuesto",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "CRUD Mecanicos",
+			"item": [
+				{
+					"name": "Listar mecanicos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{backend-host}}/{{nombre-war}}/mecanicos",
+							"host": [
+								"{{backend-host}}"
+							],
+							"path": [
+								"{{nombre-war}}",
+								"mecanicos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obtener mecanico por ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{backend-host}}/{{nombre-war}}/mecanicos/:idMecanico",
+							"host": [
+								"{{backend-host}}"
+							],
+							"path": [
+								"{{nombre-war}}",
+								"mecanicos",
+								":idMecanico"
+							],
+							"variable": [
+								{
+									"key": "idMecanico",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Crear mecanico",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"nombre\": \"Juan Pérez\",\n  \"direccion\": \"Calle Falsa 123\",\n  \"telefono\": \"098123456\",\n  \"fechaIngreso\": \"2025-04-01\",\n  \"especialidad\": \"Motores\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{backend-host}}/{{nombre-war}}/mecanicos",
+							"host": [
+								"{{backend-host}}"
+							],
+							"path": [
+								"{{nombre-war}}",
+								"mecanicos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Editar mecanico",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"nombre\": \"Juan Pérez\",\n  \"direccion\": \"Calle Falsa 123\",\n  \"telefono\": \"098123456\",\n  \"fechaIngreso\": \"2025-04-01\",\n  \"especialidad\": \"Motores\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{backend-host}}/{{nombre-war}}/mecanicos/:idMecanico",
+							"host": [
+								"{{backend-host}}"
+							],
+							"path": [
+								"{{nombre-war}}",
+								"mecanicos",
+								":idMecanico"
+							],
+							"variable": [
+								{
+									"key": "idMecanico",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar mecanico",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{backend-host}}/{{nombre-war}}/mecanicos/:idMecanico",
+							"host": [
+								"{{backend-host}}"
+							],
+							"path": [
+								"{{nombre-war}}",
+								"mecanicos",
+								":idMecanico"
+							],
+							"variable": [
+								{
+									"key": "idMecanico",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Servicios",
+			"item": [
+				{
+					"name": "Listar servicios",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{backend-host}}/{{nombre-war}}/servicios?clienteId=1&fecha=2025-05-09",
+							"host": [
+								"{{backend-host}}"
+							],
+							"path": [
+								"{{nombre-war}}",
+								"servicios"
+							],
+							"query": [
+								{
+									"key": "clienteId",
+									"value": "1"
+								},
+								{
+									"key": "fecha",
+									"value": "2025-05-09"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obtener servicio por ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{backend-host}}/{{nombre-war}}/servicios/:idServicio",
+							"host": [
+								"{{backend-host}}"
+							],
+							"path": [
+								"{{nombre-war}}",
+								"servicios",
+								":idServicio"
+							],
+							"variable": [
+								{
+									"key": "idServicio",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Crear servicio",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"fecha\": \"2025-04-15\",\n  \"descripcionGeneral\": \"Mantenimiento general\",\n  \"kilometrajeActual\": 15000,\n  \"costoTotal\": 300000,\n  \"idVehiculo\": 1,\n  \"detalles\": [\n    {\n      \"descripcion\": \"Cambio de aceite\",\n      \"costo\": 50000,\n      \"idRepuestos\": [{{repuestoId}}],\n      \"idMecanicos\": [{{mecanicoId}}]\n    }\n  ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{backend-host}}/{{nombre-war}}/servicios",
+							"host": [
+								"{{backend-host}}"
+							],
+							"path": [
+								"{{nombre-war}}",
+								"servicios"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "CRUD Clientes",
+			"item": [
+				{
+					"name": "Listar clientes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{backend-host}}/{{nombre-war}}/clientes",
+							"host": [
+								"{{backend-host}}"
+							],
+							"path": [
+								"{{nombre-war}}",
+								"clientes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Crear cliente",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nombre\": \"Cachito\",\n    \"apellido\": \"Mendez\",\n    \"cedula\": 5888887,\n    \"email\": \"cachitomendez@gmail.com\",\n    \"direccion\": \"FDO\",\n    \"tipoCliente\": \"VIP\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{backend-host}}/{{nombre-war}}/clientes",
+							"host": [
+								"{{backend-host}}"
+							],
+							"path": [
+								"{{nombre-war}}",
+								"clientes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Editar cliente",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nombre\": \"Gustavo\",\n    \"apellido\": \"Franco\",\n    \"cedula\": 5888888,\n    \"email\": \"ca.sebastianlv@gmail.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{backend-host}}/{{nombre-war}}/clientes/:idCliente",
+							"host": [
+								"{{backend-host}}"
+							],
+							"path": [
+								"{{nombre-war}}",
+								"clientes",
+								":idCliente"
+							],
+							"variable": [
+								{
+									"key": "idCliente",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar cliente",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{backend-host}}/{{nombre-war}}/clientes/:idCliente",
+							"host": [
+								"{{backend-host}}"
+							],
+							"path": [
+								"{{nombre-war}}",
+								"clientes",
+								":idCliente"
+							],
+							"variable": [
+								{
+									"key": "idCliente",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
